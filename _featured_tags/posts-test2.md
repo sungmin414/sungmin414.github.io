@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Test
-slug: test
+title: Test2
+slug: test2
 category: posts
-order: 2
+order: 3
 ---

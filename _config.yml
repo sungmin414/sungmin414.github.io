@@ -142,7 +142,7 @@ defaults:
 # pages with `comments: true` in the front matter.
 disqus: psms-blog
 # Setting a tinyletter username will enable the newsletter subscription box.
-# tinyletter:            <tinyletter_username>
+#tinyletter:
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------

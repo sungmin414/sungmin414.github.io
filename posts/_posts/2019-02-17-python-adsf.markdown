@@ -1,8 +1,8 @@
 ---
-layout:     post
-title:      Python
+layout: post
+title: Python
 categories: posts
-tags:       python
+tags: python
 description: >
     python테그
 ---

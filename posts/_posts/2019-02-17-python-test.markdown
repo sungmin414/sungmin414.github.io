@@ -1,8 +1,8 @@
 ---
-layout:     post
-title:      테스트
+layout: post
+title: 테스트
 categories: posts
-tags:       test
+tags: test
 description: >
     test테그
 ---

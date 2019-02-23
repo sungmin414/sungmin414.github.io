@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: tag-blog
 title: Python
 slug: python
 category: posts

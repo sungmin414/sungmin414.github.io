@@ -221,7 +221,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink: /:name/
+    permalink: /category/:name/
     output: true
 
   featured_tags:

@@ -1,3 +1,50 @@
 ---
 ---
 {% capture include_to_scssify %}{% include styles/style.scss %}{% endcapture %}{% include header.txt %}{{ include_to_scssify | scssify }}
+
+
+
+.list-wrapper {
+  display: flex;
+}
+.list-wrapper > a{
+  width: 100%;
+  text-align: left;
+}
+
+.list-body {
+  margin:4px;
+}
+
+.folder {
+  color:#eee;
+  width:30px;
+  height:30px;
+  position: absolute;
+  text-align: center;
+  cursor:pointer;
+  right:30px;
+}
+
+.folder:hover {
+  background: #000;
+  opacity: 0.1;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"] ~ ul{
+  height: 0;
+  transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ ul{
+  list-style: none;
+  height: 100%;
+  transform-origin: top;
+  transition: transform .2s ease-out;
+  transform: scaleY(1);
+}

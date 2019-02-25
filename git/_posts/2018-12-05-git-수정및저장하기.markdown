@@ -1,0 +1,120 @@
+---
+layout: post
+title: "[Git] 수정 및 저장소에 저장하기"
+categories: posts
+tags: git
+---
+
+# [Git] 수정 및 저장소에 저장하기
+
+
+## git 사용
+
+**git 저장소 만들기**
+
+```
+git init
+```
+
+**vim 으로 md 파일 만들기**
+
+```
+vim README.md  
+```
+
+**git 상태보기**
+
+```
+git status 
+또는 줄여서
+gst
+```
+
+**git Staged하기**
+
+```
+git add README.md
+또는 줄여서
+gaa
+```
+
++ 커밋할수 있는 상태가 스냅샷 상태임
+
+**git 데이터베이스에 집어넣기**
+
+```
+git commit -m '메시지내용'
+또는 줄여서
+gc -m '메시지내용'
+```
+
+**git 스냅샷 상태 보기**
+
+```
+상태보기
+git log
+
+한줄씩 보기
+git log --oneline
+
+그래프로 보기
+git log --oneline --all --graph
+```
+
+**abc.txt 파일안에 abc내용넣어서 바로만들기**
+
+```
+echo 'abc' > abc.txt
+```
+
+**커밋한 내용과 데이터베이스내용 차이 보는법(변경 부분보기)**
+
+```
+git diff --staged
+```
+
+**파일 무시하기**
+
+> **gitignore.io 사용(필요한거 찾아쓰기)**
+
+```
+vi .gitignore
+```
+
+**파일삭제하기**
+
+```
+rm 파일명
+```
+
+**하드디스크에 있는 파일은 그대로 두고 Git만 추적하지 않게하기**
+
+```
+git rm --cached 파일명
+```
+
+**마지막 커밋메시지 덮어쓰기**
+
+```
+git commit --amend
+```
+
+**Annotated태그 만들기**
+
+-a,  -m 옵션 추가하기 a는 이름, m은 설명
+
+```
+git tag -a v1.4 -m '설명'
+```
+
+**Releases 추가(버전확인하기)**
+
+```
+git push origin -a이름
+```
+
+**특정 버전의 파일 체크아웃 해서 확인할**
+
+```
+git checkout 체크썸
+```

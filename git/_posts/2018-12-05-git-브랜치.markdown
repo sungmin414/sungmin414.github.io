@@ -1,0 +1,64 @@
+---
+layout: post
+title: "[Git] 브랜치"
+categories: posts
+tags: git
+---
+
+# [Git]브랜치
+
+
+## Git브랜치 사용
+
++ 브랜치는 커밋 사이를 가볍게 이동할 수 있는 어떤 포인터 같은 것
+
+**브랜치 생성**
+
+```
+git branch 사용할이름
+```
+
+**브랜치 이동**
+
+```
+git checkout 사용할이름
+```
+
+## 브랜치와 Merge
+
+**한번에 브랜치만들고 Checkout하는법**
+
+```
+한번에 브랜치 만들고 체크아웃하기
+git checkout -b 사용할이름
+
+따로 브랜치 만들고 체크아웃하기
+git branch 사용할이름
+git checkout 사용할이름
+```
+
+**Merge사용법**
+
+master에서 수정할 부분이있어서 새로운 branch(iss53)를 만들어서 checkout하고 수정을 한후 수정이 완료되면
+master로 다시 checkout하고 새로만들어서 수정한 branch(iss53)을 merge해서 합친다
+
+```
+git merge iss53
+
+수정 완료후 합친 브랜치는 필요없어서 삭제함
+git branch -d iss53
+```
+
+**현재 작업하는 브랜치 보기**
+
+```
+브랜치마다 마지막 커밋 메시지 함께 보기
+git branch -v
+
+merge한 브랜치 목록확인
+git branch --merged
+```
+
+
+
+

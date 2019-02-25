@@ -16,6 +16,10 @@
   margin:4px;
 }
 
+.list-body > li{
+  display: block;
+}
+
 .folder {
   color:#eee;
   width:30px;

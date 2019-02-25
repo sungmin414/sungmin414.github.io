@@ -5,7 +5,7 @@ categories: posts
 tags: python
 ---
 
-# 모듈과 패키지
+# [python] 모듈과 패키지
 
 
 ## 모듈

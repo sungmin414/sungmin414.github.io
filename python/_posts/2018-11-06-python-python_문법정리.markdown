@@ -5,7 +5,7 @@ categories: posts
 tags: python
 ---
 
-## 변수
+# [python] 문법정리
 
 
 파이썬은 모든것 (정수,문자열,함수)이 객체(object)로 이루어져 있다.

@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "[python] 클래스(class)"
-subtitle: "[python] 클래스(class)"
 categories: posts
 tags: python
 ---
 
-# 클래스 (class)
+# [python] 클래스(class)
 
 
 ## 객체지향 프로그래밍

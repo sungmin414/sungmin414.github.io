@@ -5,7 +5,7 @@ categories: posts
 tags: python
 ---
 
-# 제어문
+# [python] 제어문
 
 
 ## if, elif, else(조건문)

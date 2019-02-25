@@ -1,0 +1,51 @@
+---
+layout: post
+title: "[Git] 설치"
+categories: tip
+tags: tip
+---
+
+# git 설치
+
+
+## git 설치하기
+
+### Mac은 brew에 git 설치
+```
+> git --version
+> brew install git
+```
+
+### Ubuntu
+```shell
+sudo apt-get purge runit
+sudo apt-get purge git-all
+sudo apt-get purge git
+sudo apt-get autoremove
+sudo apt-add-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+```
+
+## 사용자 정보 설정
+
+**`--global` 옵션으로 설정하는 것은 딱 한번만 하면됨!**
+
+```
+> git config --global user.name "사용자 이름"
+> git config --global user.email 사용자@이메일
+```
+
+## 사용할 편집기 설정
+**편집기는 사용자마음(저는 vim 사용)**
+
+```
+> git config --global core.editor vim
+```
+
+### git 설정 리스트보기
+
+```
+> git config --list
+```
+

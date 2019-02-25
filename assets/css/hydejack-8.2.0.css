@@ -16,7 +16,7 @@
   margin:4px;
 }
 
-.list-body > li{
+.list-body > li > a{
   display: block;
 }
 

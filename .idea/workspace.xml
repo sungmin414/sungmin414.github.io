@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06beeed8-0a3b-4261-9529-24c1adf8f40a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote_Rebase.markdown" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +35,8 @@
           <entry key="html" value="125" />
           <entry key="jpg" value="4" />
           <entry key="js" value="1" />
-          <entry key="markdown" value="89" />
-          <entry key="md" value="150" />
+          <entry key="markdown" value="92" />
+          <entry key="md" value="151" />
           <entry key="scss" value="11" />
           <entry key="yml" value="38" />
         </counts>
@@ -46,7 +47,7 @@
           <entry key="HTML" value="125" />
           <entry key="Image" value="4" />
           <entry key="JavaScript" value="1" />
-          <entry key="Markdown" value="239" />
+          <entry key="Markdown" value="243" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SCSS" value="11" />
           <entry key="YAML" value="38" />
@@ -57,7 +58,7 @@
           <entry key="Gemfile" value="19" />
           <entry key="css" value="102" />
           <entry key="html" value="504" />
-          <entry key="markdown" value="7047" />
+          <entry key="markdown" value="7912" />
           <entry key="md" value="1221" />
           <entry key="scss" value="44" />
           <entry key="yml" value="1919" />
@@ -67,7 +68,7 @@
         <counts>
           <entry key="CSS" value="102" />
           <entry key="HTML" value="504" />
-          <entry key="Markdown" value="8268" />
+          <entry key="Markdown" value="9133" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="SCSS" value="44" />
           <entry key="YAML" value="1919" />
@@ -80,48 +81,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치.markdown">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-918">
-                <caret selection-end-line="7" selection-end-column="10" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-워크플로.markdown">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote_Rebase.markdown">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="396">
-                <caret line="20" selection-start-line="20" selection-end-line="20" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote.markdown">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="648">
-                <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-수정및저장하기.markdown">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="382">
-                <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+                <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -170,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/2019-02-17-python-adsf.markdown" />
         <option value="$PROJECT_DIR$/_featured_categories/hyde.md" />
         <option value="$PROJECT_DIR$/posts/_posts/2019-12-22-python-list.markdown" />
         <option value="$PROJECT_DIR$/_posts/2019-12-23-python-aaaaa.markdown" />
@@ -221,6 +185,7 @@
         <option value="$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-remote.markdown" />
         <option value="$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-워크플로.markdown" />
         <option value="$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote.markdown" />
+        <option value="$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote_Rebase.markdown" />
       </list>
     </option>
   </component>
@@ -361,7 +326,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980494" visible="true" weight="0.22961374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980494" visible="true" weight="0.23390558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50195056" side_tool="true" weight="0.35887095" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -572,16 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_featured_tags/posts-git.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="196">
-            <caret line="7" column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/hydejack-7.5.2.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -649,26 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-기초.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-191">
-            <caret selection-end-line="7" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-04-git.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="196">
-            <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tip/_posts/2018-12-05-markdown설치.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -709,21 +644,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치.markdown">
+    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-04-git.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-918">
-            <caret selection-end-line="7" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-수정및저장하기.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="382">
-            <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+          <first_editor relative-caret-position="336">
+            <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           </first_editor>
           <second_editor />
         </state>
@@ -739,11 +664,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote.markdown">
+    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-기초.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="648">
-            <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <first_editor>
+            <caret selection-end-line="7" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1228">
+            <caret selection-end-line="7" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-수정및저장하기.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3136">
+            <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_featured_tags/posts-git.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="196">
+            <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote_Rebase.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="396">
+            <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           </first_editor>
           <second_editor />
         </state>

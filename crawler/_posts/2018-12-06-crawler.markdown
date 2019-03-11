@@ -1,0 +1,20 @@
+---
+layout: post
+title: "[Crawler] 크롤링"
+categories: posts
+tags: git
+---
+
+# [Crawler] 크롤링하기
+
+
+## 크롤링 
+
+### 크롤링 모듈 설치
+``` 
+# jupyter notebookdp requests 모듈설치해서 쓰기(requests 사용시)
+pip install requests notebook
+
+# beautifulsoup 모듈 설치해서 사용하기(beautifulsoup 사용시)
+pip install beautifulsoup4 lxml
+```

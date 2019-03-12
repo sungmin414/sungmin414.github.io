@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06beeed8-0a3b-4261-9529-24c1adf8f40a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/_posts/2018-12-06-crawler.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/_posts/2018-12-06-crawler.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_featured_tags/posts-Crawler.md" beforeDir="false" afterPath="$PROJECT_DIR$/_featured_tags/posts-crawler.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,18 +15,18 @@
     <session id="-1048897180">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.6" value="5" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -37,8 +37,8 @@
           <entry key="html" value="125" />
           <entry key="jpg" value="4" />
           <entry key="js" value="1" />
-          <entry key="markdown" value="121" />
-          <entry key="md" value="158" />
+          <entry key="markdown" value="123" />
+          <entry key="md" value="160" />
           <entry key="scss" value="11" />
           <entry key="yml" value="40" />
         </counts>
@@ -49,7 +49,7 @@
           <entry key="HTML" value="125" />
           <entry key="Image" value="4" />
           <entry key="JavaScript" value="1" />
-          <entry key="Markdown" value="279" />
+          <entry key="Markdown" value="283" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SCSS" value="11" />
           <entry key="YAML" value="40" />
@@ -82,25 +82,13 @@
     <favorites_list name="sungmin414.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_featured_tags/posts-Crawler.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="196">
-                <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawler/_posts/2018-12-06-crawler.markdown">
+        <entry file="file://$PROJECT_DIR$/_featured_tags/posts-crawler.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="404">
-                <caret line="98" column="3" lean-forward="true" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
+              <first_editor relative-caret-position="168">
+                <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -246,17 +234,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="sungmin414.github.io" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,6 +292,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="sungmin414.github.io" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,7 +340,7 @@
     <frame x="1440" y="-540" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980494" visible="true" weight="0.16997617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980494" visible="true" weight="0.17235902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50195056" side_tool="true" weight="0.35887095" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -590,16 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote_Rebase.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-416">
-            <caret line="29" selection-start-line="29" selection-end-line="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tip/_posts/2018-12-05-python라이브러리.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -758,16 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_featured_tags/posts-git.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="196">
-            <caret line="7" column="3" lean-forward="true" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-04-git.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -778,11 +746,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_featured_tags/posts-Crawler.md">
+    <entry file="file://$PROJECT_DIR$/_featured_tags/posts-git.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="196">
-            <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <caret line="7" column="3" lean-forward="true" selection-end-line="7" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/_posts/2018-12-05-git-브랜치-Remote_Rebase.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="812">
+            <caret line="29" selection-start-line="29" selection-end-line="29" />
           </first_editor>
           <second_editor />
         </state>
@@ -791,8 +769,18 @@
     <entry file="file://$PROJECT_DIR$/crawler/_posts/2018-12-06-crawler.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="404">
-            <caret line="98" column="3" lean-forward="true" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
+          <first_editor relative-caret-position="504">
+            <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_featured_tags/posts-crawler.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>

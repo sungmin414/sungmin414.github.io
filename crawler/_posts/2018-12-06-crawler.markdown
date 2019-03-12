@@ -122,5 +122,3 @@ parse.parse_qs(parse.urlsplit(url).query)
 dict(parse.parse_qsl(parse.urlsplit(url).query))
 {'item': '98', 'op': '92', 'ct': '32'}
 ```
-
-asdf

@@ -2,7 +2,7 @@
 layout: post
 title: "[Crawler] 크롤링"
 categories: posts
-tags: git
+tags: crawler
 ---
 
 # [Crawler] 크롤링하기
@@ -12,9 +12,115 @@ tags: git
 
 ### 크롤링 모듈 설치
 ``` 
-# jupyter notebookdp requests 모듈설치해서 쓰기(requests 사용시)
+# jupyter notebookdp requests 모듈설치해서 쓰기(requests 사용시, 정규표현식사용)
 pip install requests notebook
 
-# beautifulsoup 모듈 설치해서 사용하기(beautifulsoup 사용시)
+# beautifulsoup 모듈 설치해서 사용하기(beautifulsoup 사용시, 정규표현식몰라도 사용할수있음)
 pip install beautifulsoup4 lxml
 ```
+
+### beautifulsoup 사용하기
+```
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html을 담은 변수명, 'lxml')
+```
+### BeautifulSoup 문서 보기
+[BeautifulSoup문서](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+### BeautifulSoup 사용하여 크롤링 예시
+
+```
+import os
+from urllib import parse
+
+from bs4 import BeautifulSoup
+import requests
+
+# HTML 파일을 저장하거나 불러올 경로
+file_path = 'data/episode_list.html'
+# HTTP요청을 보낼 주소
+url_episode_list = 'https://comic.naver.com/webtoon/list.nhn'
+# HTTP요청시 전달할 GET Parameters
+params = {
+    'titleId': 718022,
+}
+# HTML파일이 로컬에 저장되어 있는지 검사
+if os.path.exists(file_path):
+    # 저장되어 있다면, 해당 파일을 읽어서 html변수에 할당
+    html = open(file_path, 'rt').read()
+else:
+    # 저장되어 있지 않다면, requests를 사용해 HTTP GET요청
+    response = requests.get(url_episode_list, params)
+    # 요청 응답객체의 text속성값을 html변수에 할당
+    html = response.text
+    # 받은 텍스트 데이터를 HTML파일로 저장
+    open(file_path, 'wt').write(html)
+
+# BeautifulSoup 클래스형 객체 생성 및 soup 변수에 할당
+soup = BeautifulSoup(html, 'lxml')
+
+# div.detail > h2 의
+# 0번째 자식: 제목 텍스트
+# 1번째 자식: 작가정보 span Tag
+# Tag로부터 문자열을 가져올때 get_text()
+h2_title = soup.select_one('div.detail > h2')
+title = h2_title.contents[0].strip()
+author = h2_title.contents[1].get_text(strip=True)
+# div.detail > p (설명)
+description = soup.select_one('div.detail > p').get_text(strip=True)
+#에피소드 목록을 담고 있는 table
+table = soup.select_one('table.viewList')
+# table내의 모든 tr 요소 목록
+tr_list = table.select('tr')
+
+# 첫 번째 tr은 thead의 tr이므로 제외, tr_list의 [1:]부터 순회
+for index, tr in enumerate(tr_list[1:]):
+    # 에피소드에 해당하는 tr은 클래스가 없으므로,
+    # 현재 순회중인 tr요소가 클래스 속성값을 가진다면 continue
+    if tr.get('class'):
+        continue
+    url_thumbnail = tr.select_one('td:nth-of-type(1) img').get('src')
+    url_detail = tr.select_one('td:nth-of-type(2) > a').get('href')
+    query_string = parse.urlsplit(url_detail).query
+    query_dict = parse.parse_qs(query_string)
+    no = query_dict['no'][0]
+
+    title = tr.select_one('td:nth-of-type(2) > a').get_text(strip=True)
+    rating = tr.select_one('td:nth-of-type(3) strong').get_text(strip=True)
+    created_date = tr.select_one('td:nth-of-type(4)').get_text(strip=True)
+
+
+    print(url_thumbnail)
+    print(url_detail)
+    print(no)
+    print(title)
+    print(rating)
+    print(created_date)
+```
+
+### URL query parameters dict 형식으로 만들기
+```
+parse_qs() 는 지정된 쿼리스트링을 해석하여 dict() 로 반환.
+parse_qsl() 을 사용하는 경우에는 파라미터와 값을 쌍으로 갖는 튜플 리스트로 반환받을 수 있음.
+
+parse_qs(qs, keep_blank_values=False, strict_parsing=False, encoding='utf-8', errors='replace')
+```
+
+### 쿼리 스트링 예시
+```
+from urllib import parse
+
+url = "http://www.example.org/default.html?ct=32&op=92&item=98"
+parse.urlsplit(url)
+SplitResult(scheme='http', netloc='www.example.org', path='/default.html', query='ct=32&op=92&item=98', fragment='')
+
+# 함수는 나눈 URL 부분들을 튜플에 담아 반환
+parse.parse_qs(parse.urlsplit(url).query)
+{'item': ['98'], 'op': ['92'], 'ct': ['32']}
+
+# 만약 쿼리스트링 변환 결과를 파라미터와-값 쌍으로 이루어진 튜플 리스트로 얻고 싶은 경우 parse_qsl()을 사용.
+dict(parse.parse_qsl(parse.urlsplit(url).query))
+{'item': '98', 'op': '92', 'ct': '32'}
+```
+
+asdf

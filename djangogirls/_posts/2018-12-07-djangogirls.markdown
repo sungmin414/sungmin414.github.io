@@ -249,8 +249,8 @@ STATICFILES_DIRS = [
 ```
 # static load방법 (html 파일안에 추가해주기)
 
-{% load static %}	<------ 맨위
-<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">  
+{% raw %}{% load static %}	<------ 맨위
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">{% endraw %}
 ```
 
 ## templates 용어
@@ -259,16 +259,16 @@ STATICFILES_DIRS = [
 linebreaksbr      	<- 엔터가 들어가있는 데이터 줄바꿈해주는 명령어 
 truncatechars:200 	<- 200글자 이후에는 짤림
 {{ test }} <-- 변수를 의미
-{% extends 'base.html' %} <- base.html참조
+{% raw %}{% extends 'base.html' %} <- base.html참조
 {% block content %}{% endblock %} <- html파일 나눌때 사용
-{% url 'urlname넣기' pk=post.pk %} <- href url경로 쓸때 사용
+{% url 'urlname넣기' pk=post.pk %} <- href url경로 쓸때 사용{% endraw %}
 
 ```
 
 ## 폼사용하기
 
 ```
-{% extends 'base.html' %}
+{% raw %}{% extends 'base.html' %}
 
 {% block content %}
 <h2>새 포스트 작</h2>
@@ -284,7 +284,7 @@ truncatechars:200 	<- 200글자 이후에는 짤림
     </div>
     <button type="submit" class="btn btn-primary btn-block">작성</button>
 </form>
-{% endblock %}
+{% endblock %}{% endraw %}
 
 # method=POST 방식일때는 csrf 필요
 ```

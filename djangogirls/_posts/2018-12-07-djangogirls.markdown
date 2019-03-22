@@ -244,6 +244,7 @@ STATICFILES_DIRS = [
 # STATIC 경로 만들어주기 (경로를 만들어줘야 HTML에서 bootstrap 불러올수있음)
 ```
 
+
 ```
 # static load 방법 (html 파일안에 추가해주기)
 
@@ -252,6 +253,7 @@ STATICFILES_DIRS = [
 ```
 
 ## templates 용어
+
 ```
 linebreaksbr      	<- 엔터가 들어가있는 데이터 줄바꿈해주는 명령어 
 truncatechars:200 	<- 200글자 이후에는 짤림
@@ -312,7 +314,7 @@ def post_create(request):
 ```
 
 ```
-# 데이터 수정 코드
+# 데이터 수정 코드..
 
 def post_update(request, pk):
     post = Post.objects.get(pk=pk)

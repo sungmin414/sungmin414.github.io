@@ -241,13 +241,13 @@ STATICFILES_DIRS = [
 	STATIC_DIR,
 ]
 
-STATIC 경로 만들어주기 (경로를 만들어줘야 HTML에서 bootstrap 불러올수있음)
+# STATIC 경로 만들어주기 (경로를 만들어줘야 HTML에서 bootstrap 불러올수있음)
 
 ```
 
 
 ```
-# static load 방법 (html 파일안에 추가해주기)
+# static load방법 (html 파일안에 추가해주기)
 
 {% load static %}	<------ 맨위
 <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">  

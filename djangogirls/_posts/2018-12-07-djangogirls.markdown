@@ -312,7 +312,7 @@ def post_create(request):
 ```
 
 ```
-# 데이터 수정 코드
+# 데이터 수정 코드.
 
 def post_update(request, pk):
     post = Post.objects.get(pk=pk)

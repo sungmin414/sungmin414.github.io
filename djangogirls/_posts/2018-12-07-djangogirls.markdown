@@ -249,7 +249,7 @@ STATICFILES_DIRS = [
 ```
 # static load 방법 (html 파일안에 추가해주기)
 
-{% load static %}	<------ 맨위
+{% raw %}{% load static %}{% endraw %}	<------ 맨위
 <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">  
 ```
 

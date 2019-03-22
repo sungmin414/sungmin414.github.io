@@ -242,6 +242,7 @@ STATICFILES_DIRS = [
 ]
 
 # STATIC 경로 만들어주기 (경로를 만들어줘야 HTML에서 bootstrap 불러올수있음)
+
 ```
 
 

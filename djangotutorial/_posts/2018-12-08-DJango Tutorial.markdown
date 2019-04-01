@@ -219,7 +219,7 @@ def vote(request, question_id):
 ```
 # polls/templates/polls/index.html
 
-{% if latest_question_list %}
+{% raw %}{% if latest_question_list %}
     <ul>
         {% for question in latest_question_list %}
         <li>
@@ -231,14 +231,14 @@ def vote(request, question_id):
     </ul>
 {% else %}
     <p>No polls are available.</p>
-{% endif %}
+    {% endif %}{% endraw %}
 ```
 
 ```
 # polls/templates/polls/detail.html
 
 <h1>{{ question.question_text }}</h1>
-
+{% raw %}
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'polls:vote' question.id %}" method="POST">
@@ -248,7 +248,7 @@ def vote(request, question_id):
     <label for="choice{{ forloop.counter }}">
         {{ choice.choice_text }}
     </label><br>
-    {% endfor %}
+    {% endfor %}{% endraw %}
     <input type="submit" value="Vote">
 </form>
 
@@ -260,16 +260,17 @@ def vote(request, question_id):
 
 <h1>{{ question.question_text }} Results</h1>
 <ul>
+{% raw %}
     {% for choice in question.choice_set.all %}
         <li>
             {{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize}}
         </li>
     {% endfor %}
-</ul>
+</ul> 
 
 <a href="{% url 'polls:detail' question.pk %}">Vote again</a>
 <a href="{% url 'polls:index' %}">Return to polls index</a>
-
+{% endraw %}
 ```
 
 

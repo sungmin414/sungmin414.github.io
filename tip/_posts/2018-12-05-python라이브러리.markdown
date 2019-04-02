@@ -120,7 +120,7 @@ cd python
 
 기본 파이썬 셸보다 다양한 기능을 사용할 수 있도록 해주는 셸을 제공해줌
 
-## iPython, jupyter notebook 설치
+## iPython, jupyter notebook, django_extensions 설치
 
 `pip install ipython`
 
@@ -128,6 +128,11 @@ cd python
 
 `pip install notebook`
 커맨드라인에서 `jupyter notebook`실행
+
+`pip install django_extensions` 
+config/settings.py 안에 INSTALLED_APPS에 django_extensions 추가
+커맨드라인에서 `./manage.py shell_plus`
+자동으로 모듈 import 해주는 패키지
 
 ---
 

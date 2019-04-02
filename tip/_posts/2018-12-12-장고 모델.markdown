@@ -1,0 +1,99 @@
+---
+layout: post
+title: "[django] model 필드, 필드옵션"
+categories: tip
+tags: tip
+---
+
+
+# 장고 모델
+
++ 뷰(View)함수에서 데이터베이스에 어떤 작업을 요청할 때는 SQL 구문이 필요
+
+### SQL(Structured Query Language)
+
++ Query: 정보수집에 대한 요청에 쓰이는 컴퓨터 언어
++ SQL: 관계형 데이터베이스 관리 시스템(Relational Database Management System)의 데이터를 관리하기 위해 설계된 특수목적의 프로그래밍 언어
++ RDBMS의 종류: MySQL, MariaDB, PostgreSQL
++ 장고 모델은 관계형 데이터베이스 (RDBMS)만을 지원
++ 장고 모델을 통해 SQL을 생성/실행(ORM)
+
+### Django Model
+
++ 장고 내장 ORM
++ ORM의 역활: SQL을 직접 작성하지 않아도 장고 모델을 통해 데이터베이스로 접근한다(조회/추가/수정/삭제)
++ 보통 하나의 장고 프로젝트에서 하나의 DB를 사용한다.
++ 파이썬 클래스 와 데이터베이스 테이블을 매핑
+	+ Model: DB 테이블과 매핑
+	+ model instance: DB 테이블의 1 Row
+
+### 장고 커스텀 모델 정의
+
++ 데이터베이스 테이블 구조/타입을 먼저 설계를 한다음에 모델을 정의
++ 모델 클래스명은 단수형을 사용(Posts가 아니라 Post)
+
+```
+from django.db import models
+
+class Post(models.Model):
+	# 길이 제한이 있는 문자열
+	title = models.CharField(max_length=100)
+	
+	# 길이 제한이 없는 문자열
+	content = models.TextField()
+	
+	# 해당 레코드 생성시 현재 시간 자동 저장
+	created_at = models.DateTimeField(auto_now_add=True)
+	
+	# 해당 레코드 갱성시 현재 시간 자동저장
+	updated_at = models.DateTimeField(auto_now=True)
+```
+
+### 모델 등록절차
+
+1. models.py 에서 모델클래스 정의 (상기코드 참고)
+2. sehll에서 migrations, migrate 실행
+3. admin.py에 모델클래스 등록
+
+```
+# shell에서 migrations, migrate 실행
+
+./manage.py makemigrations
+./manage.py migrate
+
+-> 위 명령을 통해서 앱폴더 아래에 migration 폴더가 생성되고 DB에 테이블을 생성
+```
+
+```
+# admin.py에 모델클래스 등록
+
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
+```
+
+### 지원하는 모델필드 타입
+
+
++ [가이드문서](https://docs.djangoproject.com/es/2.2/ref/models/fields/)
++ 주요 Field Types: AutoField, BooleanField, CharField, DateTimeField, FileField, ImageField, TextField
++ 주요 Relation Ship Types: ForeignKey, ManayToManyField, OneToOneField
+
+### 주요 Field Option
+
++ 필드옵션: 필드마다 고유 옵션이 존재, 공통 적용 옵션도 있음
++ null (DB옵션): DB필드에 NULL허용 여부 (디폴트: False)
++ unique (DB옵션): 유일성 여부 (디폴트: False) 
++ blank: 입력값 유효성(validation)검사 시에 empty 값 허용여부 (디폴트: False)
++ default: 디폴트 값 지정, 값이 지정되지 않았을 때 사용
++ verbose_name: 필드 레이블, 지정되지 않으면 필드명이 쓰여짐
++ validators: 입력밧 유효성 검사를 수행할 함수를 다수 지정
+	+ 각 필드마다 고유한 validators 들이 이미 등록되어있기도함
+	+ 예: 이메일만 받기, 최대길이 제한, 최소길이 제한, 최대값 제한, 최소값 제한 등
++ choices (form widget용): select box 소스로 사용
++ help_text(form widget용): 필드 입력 도움말
++ auto_now_add: Bool, True 인 경우, 레코드 생성시 현재 시간으로 자동 저장
+
+
+

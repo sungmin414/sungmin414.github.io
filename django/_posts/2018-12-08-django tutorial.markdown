@@ -2,7 +2,7 @@
 layout: post
 title: "[Django-tutorial] 장고튜토리얼 사용해보기"
 categories: posts
-tags: djangotutorial
+tags: django
 ---
 
 # [Django-tutorial] 장고 튜토리얼 사용해보기

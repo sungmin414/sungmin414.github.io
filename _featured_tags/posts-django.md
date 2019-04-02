@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Djangotutorial
-slug: djangotutorial
+title: Django
+slug: django
 category: posts
 menu: false
-order: 5
+order: 4
 ---

@@ -5,7 +5,7 @@ categories: posts
 tags: django
 ---
 
-# Relationships
+# [Django-Relationships] 모델관계
 
 + 관계형 데이터베이스 
 	+ many-to-one

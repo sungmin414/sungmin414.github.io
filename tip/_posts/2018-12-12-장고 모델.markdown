@@ -56,6 +56,16 @@ class Post(models.Model):
 3. admin.py에 모델클래스 등록
 
 ```
+# config/settings.py
+
+INSTALLED_APPS = [
+    'app명',
+]
+
+-> INSTALLED_APPS에 app명을 등록해줘야 사용할 app명의 models을 참조함
+```
+
+```
 # shell에서 migrations, migrate 실행
 
 ./manage.py makemigrations

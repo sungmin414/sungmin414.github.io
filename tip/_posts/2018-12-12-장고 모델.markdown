@@ -103,7 +103,11 @@ admin.site.register(Post)
 	+ 예: 이메일만 받기, 최대길이 제한, 최소길이 제한, 최대값 제한, 최소값 제한 등
 + choices (form widget용): select box 소스로 사용
 + help_text(form widget용): 필드 입력 도움말
-+ auto_now_add: Bool, True 인 경우, 레코드 생성시 현재 시간으로 자동 저장
++ `auto_now_add`: Bool, True 인 경우, 레코드 생성시 현재 시간으로 자동 저장
+
+### 모델 인스턴스에서 표시되는 값을 엑세스하기
+
++ `get_FOO_display()` 함수사용
 
 
 

@@ -590,7 +590,7 @@ def signup_view(request):
                     {% for error in field.errors %}
                         <small class="form-text text-muted">{{ error }}</small>
                     {% endfor %}
-{% end raw %}            
+{% endraw %}            
 ```
 
 ### login_required

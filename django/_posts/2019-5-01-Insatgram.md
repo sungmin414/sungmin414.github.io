@@ -570,6 +570,7 @@ def signup_view(request):
 ```
 # template
 
+{% raw %}
 {#                Form자체의 Error들을 출력#}
             {% if form.non_field_errors %}
                 {% for error in form.non_field_errors %}
@@ -589,6 +590,7 @@ def signup_view(request):
                     {% for error in field.errors %}
                         <small class="form-text text-muted">{{ error }}</small>
                     {% endfor %}
+{% end raw %}            
 ```
 
 ### login_required
@@ -686,7 +688,71 @@ class UserProfileForm(forms.ModelForm):
 
 ### post 좋아요 구현
 
-test
+```
+# members/models.py
+
+   def like_post_toggle(self, post):
+        # 자신에게 연결된 PostLike중, post값이 매개변수의 post인 PostLike가 있다면 가져오고, 없으면 생성
+        postlike, postlike_created = self.postlike_set.get_or_create(post=post)
+        # 생성되었다면 없다가 생겼다는 말이므로 (새로 종아요를 누름) 따로 처리 필요없음
+        # 생성되지 않았다면 이미 있었다는 말이므로 toggle처리를 위해 삭제
+        if not postlike_created:
+            postlike.delete()
+
+```
+
+```
+# posts/models.py
+
+class Post(models.Model):
+    author = models.ForeignKey(
+        # <AppName>.<modelName>
+        # 'members.User',
+        # User,
+        # 'auth.User'
+        # Django가 기본적으로 제공하는 User클래스
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        verbose_name='작성자',
+    )
+    # auto_now_add: 객체가 처음 생성될때의 시간 저장
+    # auto_now: 객체의 save()가 호출될 때 마다 시간 저장
+    photo = models.ImageField('사진', upload_to='post')
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    like_users = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        through='PostLike',
+        related_name='like_posts',
+        related_query_name='like_post',
+    )
+
+    class Meta:
+        verbose_name = '포스트'
+        verbose_name_plural = f'{verbose_name} 목록'
+        ordering = ['-pk']
+
+    def like_toggle(self, user):
+        # 전달받은 user가 이 Post를 Like한다면 해제
+        # 안되어있다면 Like처리
+        postlike, postlike_created = self.postlike_set.get_or_create(user=user)
+        if not postlike_created:
+            postlike.delete()
+```
+
+```
+# posts/views.py
+
+def post_like_toggle(request, post_pk):
+    if request.method == 'POST':
+        post = get_object_or_404(Post, pk=post_pk)
+        post.like_toggle(request.user)
+        # post_list의 좋아요 눌렀을때 위치 지정
+        url = reverse('posts:post-list')
+        return redirect(url + f'#post-{post_pk}')
+
+```
 
 
 ### OAuth, FaceBook Login

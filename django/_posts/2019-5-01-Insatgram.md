@@ -819,7 +819,6 @@ def post_like_toggle(request, post_pk):
                 </div>
             </div>
         {% endfor %}
-        {% endraw %}
     </div>
 {% endblock %}
 {% endraw %}

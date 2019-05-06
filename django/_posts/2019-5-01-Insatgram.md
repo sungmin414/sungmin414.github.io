@@ -273,6 +273,7 @@ app/static 폴더생성
 ```
 # base.html에서 static load하기
 
+{% raw %}
 {% load static %}		<- html파일 안에서 맨위에 작성
 
 # html head안에 static/css link하기
@@ -282,6 +283,7 @@ app/static 폴더생성
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+{% endraw %}
 ```
 
 

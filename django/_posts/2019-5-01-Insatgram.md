@@ -760,6 +760,7 @@ def post_like_toggle(request, post_pk):
 
 {% block content %}
     <div>
+    {% raw %}
         {% for post in posts %}
            <!-- 이 div가 lg(width >= 992px)일때, 4/12의 크기를 기준으로 시작함 -->
             <div id="post-{{ post.pk }}" class="col col-lg-4 offset-lg-4 mb-4">
@@ -817,6 +818,7 @@ def post_like_toggle(request, post_pk):
                 </div>
             </div>
         {% endfor %}
+        {% endraw %}
     </div>
 {% endblock %}
 {% endraw %}

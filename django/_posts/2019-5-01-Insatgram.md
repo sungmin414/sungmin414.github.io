@@ -476,6 +476,7 @@ def signup_view(request):
 ```
 # login.html
 
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -505,6 +506,7 @@ def signup_view(request):
     </form>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 ### RedirectView 제네릭뷰

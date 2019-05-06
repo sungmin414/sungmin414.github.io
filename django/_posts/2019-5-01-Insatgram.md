@@ -756,7 +756,7 @@ def post_like_toggle(request, post_pk):
 
 ```
 # post_list.html
-
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -820,7 +820,7 @@ def post_like_toggle(request, post_pk):
         {% endfor %}
     </div>
 {% endblock %}
-
+{% endraw %}
 ```
 
 

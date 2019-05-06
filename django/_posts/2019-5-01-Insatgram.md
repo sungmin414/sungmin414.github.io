@@ -754,6 +754,75 @@ def post_like_toggle(request, post_pk):
 
 ```
 
+```
+# post_list.html
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        {% for post in posts %}
+           <!-- 이 div가 lg(width >= 992px)일때, 4/12의 크기를 기준으로 시작함 -->
+            <div id="post-{{ post.pk }}" class="col col-lg-4 offset-lg-4 mb-4">
+                <!-- card모양에 대해 미리 정의된 클래스 -->
+                <div class="card">
+                    <!-- 작성자 정보를 나타낼 header부분 -->
+                    <div class="card-header">
+                        <div style="width:30px; height:30px; display: inline-block; vertical-align: middle;">
+                            <a href="" style="background-image: url('{{ post.author.img_profile_url }}');
+                                    display: inline-block; width: 100%; height: 100%; background-size: cover;
+                                    background-position: center center; vertical-align: middle;"
+                                    class="rounded-circle"></a>
+                        </div>
+                        <span>{{ post.author }}</span>
+                    </div>
+                    <!-- Card의 본문 부분 -->
+                    <div class="card-body">
+                        <img src="{{ post.photo.url }}" class="card-img-top">
+                        {% if user.is_authenticated %}
+                        <form action="{% url 'posts:post-like-toggle' post_pk=post.pk %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">
+                                {% if user in post.like_users.all %}
+                                    좋아요 해제
+                                {% else %}
+                                    좋아요
+                                {% endif %}
+                            </button>
+                        </form>
+                        {% endif %}
+                        <div>
+                            <span>좋아요 하는사람</span>
+                            <strong>{{ post.like_users.all|join:", " }}</strong>
+                        </div>
+                        <ul class="list-unstyled">
+                            {% for comment in post.comments.all %}
+                                <li>
+                                    <strong>{{ comment.author }}</strong>
+                                    <span>{{ comment.html|safe }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+{#                        댓글 작성 form구현#}
+{#                        1. 유저가 로그인 한 경우에만 보여지도록 함#}
+{#                        2. 내부요소는 atextarea[name=content]와 버튼하나#}
+{#                        3. action속성의 값을 위의 'comment_create' view에 해당하는 URL로 지정#}
+                        {% if user.is_authenticated %}
+                            <form action="{% url 'posts:comment-create' post_pk=post.pk %}" method="POST">
+                            {% csrf_token %}
+                                {{ comment_form }}
+                                <button type="submit" class="btn btn-primary btn-block">작성</button>
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+```
+
 
 ### OAuth, FaceBook Login
 

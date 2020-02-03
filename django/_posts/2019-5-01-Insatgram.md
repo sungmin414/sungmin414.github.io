@@ -828,3 +828,77 @@ def post_like_toggle(request, post_pk):
 
 [OAuth란?](https://ko.wikipedia.org/wiki/OAuth)
 
+
+## JavaScript | Ajax
+
++ Ajax는 JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자이다.
++ 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 Ajax를 한마디로 정의하자면 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이라고 할 수 있겠습니다.
+
+```
+> posts/apis.py
+
+import json
+
+from django.http import HttpResponse
+
+from .models import HashTag
+
+
+def tag_search(request):
+    keyword = request.GET.get('keyword')
+    tags = []
+    if keyword:
+        tags = list(HashTag.objects.filter(name__istartswith=keyword).values())
+    result = json.dumps(tags)
+    return HttpResponse(result, content_type='application/json')
+
+```
+
+```
+> templates/base.html
+
+<script>
+    // 검색창 밑의 결과 창 요소
+    var searchList = $('ul.search-list');
+
+    // 검색창에서 이벤트(keyup)가 일어나면 뒤의 function을 실행함
+    $('#search-input').keyup(function (e) {
+        // 검색창에 입력된 값을 위 이벤트가 실행된 순간 가져옴
+        var content = $('#search-input').val();
+
+        // 만약 검색창에 있는 값의 길이가 0이면 결과창을 숨김
+        if (content.length == 0) {
+            searchList.hide();
+        } else {
+            searchList.show();
+        }
+
+        // API에 요청
+        // /posts/api/tag-search/에 GET요청
+        // data에 keyword로 검색창에 입력되었던 값을 보냄
+        // -> GET Parameter로 알아서 번역
+        $.ajax({
+            method: 'GET',
+            url: 'http://localhost:8000/posts/api/tag-search/',
+            data: {
+                keyword: content
+            }
+        })
+        // 요청이 성공했을 경우
+        .done(function (response) {
+            // response에 Tag 객체의 리스트가 전달됨
+            var tags = response;
+            console.log(tags);
+            // 검색 결과창을 비우고
+            searchList.empty();
+            // Tag 객체 리스트를 순회
+            for (var i = 0; i < response.length; i++) {
+                // 현재 순회중인 객체를 index(i)를 사용해 직접 꺼냄
+                var curTag = response[i];
+                // 결과창에 직접 HTML요소를 삽입
+                searchList.append('<li><a href="/explore/tags/' + curTag.name +'/">' + curTag.name + '<a></li>');
+            }
+        });
+    });
+</script>
+```

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "[python] 문자열"
+title: "[html] test"
 categories: posts
-tags: python
+tags: html_css_js
 ---
 
-# [python] 문자열
+# [html] test
 
 # 문자열
 

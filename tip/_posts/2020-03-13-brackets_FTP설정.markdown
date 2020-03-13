@@ -39,4 +39,4 @@ XCode Dark Theme | 브라켓테마
 
 > FTP 연결방법
 
-![FTP설정](./img/FPT설정.png)
+![FTP설정](http://raw.githubusercontent.com/sungmin414/sungmin414.github.io/master/tip/_posts/img/FPT설정.png)

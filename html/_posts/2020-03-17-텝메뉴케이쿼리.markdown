@@ -1,0 +1,49 @@
+---
+layout: post
+title: "[html] test"
+categories: posts
+tags: html_css_js
+---
+
+# [탭메뉴] 설정
+
+## script설명
+
+```
+	<script>
+		-- movBtn 변수에 .movie_title > ul > li 버튼4개를 담기 --
+        var movBtn = $(".movie_title > ul > li");
+        
+      -- movCont 변수에 .movie_chart > div안에 포스터를 담기 --
+        var movCont = $(".movie_chart > div");
+        
+      -- movCont변에 담긴 값을 hide()메서드를 사용해 안보이게함 --
+      -- eq()메서드는 순서를 정한대로 보여줌 show()메서드는 보여주는 역활 --
+        movCont.hide().eq(0).show();
+      
+      -- movBtn 변수를 클릭했을때 함수 설정 --  
+        movBtn.click(function(e){
+        
+      -- e라는 변수를 만든다음 preventDefault()메서드를사용해 차단함 --
+           e.preventDefault();
+           
+      -- target 변수를 만들어서 this를 사용해 자기자신을 선택함 --
+            var target = $(this);
+            
+      -- index 변수를 통해서 target.index()에 번호를 넣어줌 -- 
+            var index = target.index();
+            
+      -- movBtn 안에 클래스 active를 제거함 --
+            movBtn.removeClass("active");
+      
+      -- 지정한 target에 클래스 active를 생성 -- 
+            target.addClass("active");
+            
+      -- movCont안에 있는 것을 css로 지정하여 안보이게함 --      
+            movCont.css("display","none");
+            
+      -- 선택한 부분만 보여주게함 --
+            movCont.eq(index).css("display","block");
+        });
+    </script>
+```

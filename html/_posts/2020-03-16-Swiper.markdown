@@ -9,9 +9,47 @@ tags: html_css_js
 
 ## Swiper사용법 사이트참조
 
+- API, Demos 터치슬라이더 필요한부분 끌어쓰면 편리함
+
 [Swiper 슬라이드사용가이드](https://swiperjs.com/)
 
 
 
+```
+- 메가박스 사이트만들기 swiper 제이쿼리 적용
+
+   <!--    배너 이미지 슬라이드-->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+
+        //    영화 이미지 슬라이드
+        var swiper = new Swiper('.swiper-container2', {
+            slidesPerView: 4,
+            spaceBetween: 24,
+//            mousewheel: {
+//                invert: true,
+//            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+
+    </script>
+```
 
 

@@ -80,7 +80,7 @@ reset.css에 넣어서 기본셋팅때 같이사용하면 편함
 
 
 
-##반응형 사이트를 제작하기위해 알아두기
+## 반응형 사이트를 제작하기위해 알아두기
 - 유동 레이아웃(flexible layout)
 - 미디어 쿼리(media query)
 - 반응형 이미지(responsive image)
@@ -104,15 +104,15 @@ reset.css에 넣어서 기본셋팅때 같이사용하면 편함
 
 ```
 <img srcset="img320w.jpg 320w,
-				img480w.jpg 480w,
-				img800w.jpg 800w"
+                img480w.jpg 480w,
+                img800w.jpg 800w"
         sizes="(max-width:320px)280px,
                 (max-width:480px)440px,
                 800px"
         src="img800w.jpg" alt="이미지">
 ```
 
-- 해당도를 이용한 방법
+- 해상도를 이용한 방법
 
 ```
 <img srcset="img320w.jpg,

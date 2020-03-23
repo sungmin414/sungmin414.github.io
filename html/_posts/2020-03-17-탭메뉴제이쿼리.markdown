@@ -10,6 +10,8 @@ tags: html_css_js
 ## script설명
 
 ```
+예) 메가박스 차트 텝메뉴
+
 	<script>
 		-- movBtn 변수에 .movie_title > ul > li 버튼4개를 담기 --
         var movBtn = $(".movie_title > ul > li");
@@ -46,4 +48,29 @@ tags: html_css_js
             movCont.eq(index).css("display","block");
         });
     </script>
+```
+
+## 공지사항 탭 메뉴
+
+```
+예) 메가박스 공지사항 제이쿼리
+
+//공지사항 탭 메뉴
+var tabMenu = $(".notice");
+
+//컨텐츠 내용을 숨겨주세요!
+tabMenu.find("ul > li > ul").hide();
+tabMenu.find("li.active > ul").show();
+
+function tabList(e){
+    e.preventDefault();     //#의 기능을 차단
+    var target = $(this);
+    target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();      
+    //버튼을 클릭하면 ~ul를 보여주고 
+    //부모의 li 태그에 클래스 추가하고
+    //형제의 li 테그에 클래스 제거하고
+    //제거한 자식의 ul 태그를 숨겨줌
+}
+
+tabMenu.find("ul > li > a").click(tabList).focus(tabList);
 ```

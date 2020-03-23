@@ -1,0 +1,34 @@
+---
+layout: post
+title: "[html] test"
+categories: posts
+tags: html_css_js
+---
+
+# [공지사항] 설정
+
+- 스킵메뉴란 웹사이트에서 tab를 눌러 메뉴를 지정해서 바로 갈수있는기능
+- 사용시 body바로 밑에 지정하여 사용
+
+```
+예) html.file
+
+<!--   스킵 메뉴  -->
+    <div id="skip">
+        <a rel="bookmark" href="#movie">최신 영화 소식</a>
+        <a rel="bookmark" href="#event">새로운 이벤트</a>
+        <a rel="bookmark" href="#new">새로운 영화</a>
+    </div>
+<!--//스킵 메뉴-->
+```
+
+```
+예) css.file
+
+/*스킵메뉴*/
+#skip{position: relative;}
+#skip a{position: absolute; left: 0; top: -40px; width: 140px; border: 1px solid #fff; color: #fff; text-align: center; background: #333; line-height: 30px;}
+#skip a:active,
+#skip a:focus{top: 0;}
+
+```

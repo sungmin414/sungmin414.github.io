@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[input] reset"
 categories: posts
 tags: html_css_js
 ---

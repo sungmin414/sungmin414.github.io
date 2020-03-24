@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[JS] 자료"
 categories: posts
 tags: html_css_js
 ---
@@ -73,4 +73,35 @@ function tabList(e){
 }
 
 tabMenu.find("ul > li > a").click(tabList).focus(tabList);
+```
+
+
+## 버튼 슬라이드효과
+
++ 버튼을 클릭했을때 슬라이드효과 종류
+	+ show
+	+ fadeIn
+	+ slideDown
+	+ toggle
+	+ fadeToggle
+
+```
+예)
+
+<script type="text/javascript">
+//        버튼을 클릭하면 전체 메뉴를 보이게 해줌
+        $(".title .btn").click(function(e){
+//            e.preventDefault(); # 기능을 깨줌
+            e.preventDefault();
+//            $("#cont_nav").css("display","block");
+//            $("#cont_nav").show();
+//            $("#cont_nav").fadeIn();
+//            $("#cont_nav").slideDown();
+//            $("#cont_nav").toggle();
+//            $("#cont_nav").fadeToggle();
+            $("#cont_nav").slideToggle(200);
+            $(this).toggleClass("on");
+        });
+    </script>
+    
 ```

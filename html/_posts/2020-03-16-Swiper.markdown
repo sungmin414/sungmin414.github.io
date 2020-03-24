@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[Swiper] 슬라이드문서"
 categories: posts
 tags: html_css_js
 ---

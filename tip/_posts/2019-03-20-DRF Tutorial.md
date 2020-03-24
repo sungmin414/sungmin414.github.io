@@ -1,3 +1,10 @@
+---
+layout: post
+title: "[DRF] Tutorial"
+categories: tip
+tags: tip
+---
+
 # DRF Tutorial
 
 ## Postman

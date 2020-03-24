@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[position] 가운데 정렬"
 categories: posts
 tags: html_css_js
 ---

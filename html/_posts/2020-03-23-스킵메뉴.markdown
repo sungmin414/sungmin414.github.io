@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[스킵메뉴] 설정"
 categories: posts
 tags: html_css_js
 ---

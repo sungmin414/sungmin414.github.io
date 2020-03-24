@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[Youtube] IFrame API"
 categories: posts
 tags: html_css_js
 ---
@@ -9,6 +9,22 @@ tags: html_css_js
 
 ## Youtube IFrame Player API 사용법
 - [유튜브 API사용법 사이트](https://developers.google.com/youtube/iframe_api_reference?hl=ko)
+
+
+```
+예) 메가박스 html.file
+
+   <!--    트레일러-->
+    <aside id="blackout" class="overlay">
+        <div id="trailerModal" class="modal">
+            <div id="trailer"><!-- YouTube 플레이어로 대체되는 부분 -->
+                
+            </div>
+            <button id="hideTrailer" class="modal_close">닫기</button>
+        </div>
+    </aside>
+    <!--    //트레일러-->
+```
 
 ```
 예) 메가박스 css.file

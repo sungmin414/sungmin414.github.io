@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[이미지] 설정"
 categories: posts
 tags: html_css_js
 ---
@@ -16,6 +16,8 @@ tags: html_css_js
 	2. background를 이용할때는 (mediquery)
 - 디바이스에 따라 해상도를 구별 할수있어야함(확인방법 아래 링크)
 	- [디바이스별 해상도확인사이트](https://webkit.org/demos/srcset/)
+	- [고밀도 디스플레이를 위한 이미지 다루는법 정리 된 사이트](https://blog.hanlee.io/2018/high-density-display-and-images/)
+
 
 ```
 reset.css에 넣어서 기본셋팅때 같이사용하면 편함
@@ -133,6 +135,20 @@ reset.css에 넣어서 기본셋팅때 같이사용하면 편함
 - 이미지 스프라이트를 사용하면 서버 요청 수가 감소하고 대역폭이 절약된다.
 
 
+## lightgallery 플러그인
+
++ [lightgallery플로그인 사용법 문서](https://sachinchoolur.github.io/lightGallery/)
 
 
+## grid
++ grid
++ 사용법 
+	+ [grid 사용법 문서](https://www.w3schools.com/cssref/pr_grid.asp)
+
+```
+# 사용법( 열과행을 지정할수 있음, 자세한건 검색해서 사용하기 )
+
+display: grid;
+grid-template-columns: 150px 1fr;
+```
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[html] test"
+title: "[html] setting"
 categories: posts
 tags: html_css_js
 ---

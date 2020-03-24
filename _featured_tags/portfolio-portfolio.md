@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: blog
 title: Portfolio
 slug: portfolio
 category: portfolio

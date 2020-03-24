@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: list
 title: Portfolio
 slug: portfolio
 menu: true

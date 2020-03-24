@@ -4,7 +4,7 @@ title: Tip
 slug: tip
 menu: true
 submenu: false
-order: 2
+order: 1
 description: >
   여러 팁들을 공유합니다.
 ---

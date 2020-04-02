@@ -125,18 +125,37 @@ tags: html_css_js
 ### 정보공유하기 
 
 ```
-    <!-- 페이스북 메타 태그 -->
-    <meta property="og:title" content="메가박스 사이트 만들기" />
-    <meta property="og:url" content="https://github.com/webstoryboy/megabox2019" />
-    <meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" />
-    <meta property="og:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다." />
+<!-- 페이스북 메타 태그 -->
+<meta property="og:title" content="메가박스 사이트 만들기" />
+<meta property="og:url" content="https://github.com/webstoryboy/megabox2019" />
+<meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" />
+<meta property="og:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다." />
    
-    <!-- 트위터 메타 태그 -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="메가박스 사이트 만들기">
-    <meta name="twitter:url" content="https://github.com/webstoryboy/megabox2019/">
-    <meta name="twitter:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg">
-    <meta name="twitter:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다.">
+<!-- 트위터 메타 태그 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="메가박스 사이트 만들기">
+<meta name="twitter:url" content="https://github.com/webstoryboy/megabox2019/">
+<meta name="twitter:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg">
+<meta name="twitter:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다.">
+
+----------------------------
+
+예) js.file
+
+<script>
+	//http://www.facebook.com/sharer.php?u={페이지 제목}&t={페이지링크}
+	//http://twitter.com/intent/tweet?text={페이지 제목}&url={페이지링크}
+	//https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
+	//https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
+	$(".facebook").click(function(e){
+		e.preventDefault();
+		window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600'); 
+        });
+		$(".twitter").click(function(e){
+		e.preventDefault();
+		window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+	});
+</script>
 ```
 
 ## 시멘틱태그 인식

@@ -1,5 +1,11 @@
-# layer popup
+---
+layout: post
+title: "[layer popup] 만들기"
+categories: posts
+tags: html_css_js
+---
 
+# [layer popup]
 
 ## layer popup
 

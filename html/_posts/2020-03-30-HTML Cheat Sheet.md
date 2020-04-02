@@ -1,4 +1,11 @@
-# HTML Cheat Sheet
+---
+layout: post
+title: "[HTML Cheat Sheet]"
+categories: posts
+tags: html_css_js
+---
+
+# [HTML Cheat Sheet]
 
 ### HTML 구조 테그
 |태그이름|표시형태|설명|

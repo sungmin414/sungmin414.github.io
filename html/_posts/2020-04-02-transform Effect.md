@@ -1,4 +1,11 @@
-# transform Effect
+---
+layout: post
+title: "[transform] Effect"
+categories: posts
+tags: html_css_js
+---
+
+# [transform] Effect
 
 - transform과 transition을 이용하여 효과주기
 - [web's_site](https://wsss.tistory.com/)

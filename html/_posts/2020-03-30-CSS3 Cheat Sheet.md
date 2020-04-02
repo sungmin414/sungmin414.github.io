@@ -1,4 +1,12 @@
-# CSS3 Cheat Sheet
+---
+layout: post
+title: "[CSS3 Cheat Sheet]"
+categories: posts
+tags: html_css_js
+---
+
+# [CSS3 Cheat Sheet]
+
 
 ### 폰트 관련 속성
 |스타일 속성 이름|설명|

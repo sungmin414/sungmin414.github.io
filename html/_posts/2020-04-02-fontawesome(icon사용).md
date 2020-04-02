@@ -1,4 +1,12 @@
-# fontawesome(icon사용)
+---
+layout: post
+title: "[fontawesome] icon사용"
+categories: posts
+tags: html_css_js
+---
+
+
+# [fontawesome] icon사용
 
 **[fontawesom_site(icon)](https://fontawesome.com/)**
 

@@ -87,6 +87,10 @@ brew install readline xz
 
 #### pyenv를 사용해서 파이썬 3.6.4버전 설치  
 
+### 버전확인 후 설치
+
+`pyenv install --list`
+
 `pyenv install 3.6.4`
 
 ## pyenv 사용
